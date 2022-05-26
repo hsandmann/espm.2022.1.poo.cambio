@@ -29,7 +29,7 @@ public class CambioResource {
         return moedaService.listaAll();
     }
 
-    @GetMapping("/moeda/{simbolo:[A-Z]{3}}")
+    @GetMapping("/moeda/{simbolo:[A-Z]{3,}}")
     public Moeda findMoedaBySimbolo(@PathVariable String simbolo) {
         return moedaService.findBySimbolo(simbolo);
     }
